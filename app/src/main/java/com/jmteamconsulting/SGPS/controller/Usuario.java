@@ -6,7 +6,7 @@ package com.jmteamconsulting.SGPS.controller;
  * 
  * @author ianpineda
  */
-class Usuario {
+public class Usuario {
     void crearUsuario() {
         
     }
