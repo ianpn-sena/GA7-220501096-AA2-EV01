@@ -54,11 +54,12 @@ public class DB {
         dbProperties.load(lectorDeArchivoProperties);
         
         // Se leen las propiedades necesaria del archivo db.properties.
-        final String hostname = (String) dbProperties.get("db_hostname");
-        final String puerto = (String) dbProperties.get("db_puerto");
-        final String usuario = (String) dbProperties.get("db_usuario");
-        final String password = (String) dbProperties.get("db_password");
-        final String nombre = (String) dbProperties.get("db_nombre");
+        final String hostname = dbProperties.getProperty("db_hostname");
+        final String puerto = dbProperties.getProperty("db_puerto");
+        final String usuario = dbProperties.getProperty("db_usuario");
+        final String password = dbProperties.getProperty("db_password");
+        final String nombre = dbProperties.getProperty("db_nombre");
+        final String timezone = dbProperties.getProperty("db_timezone");
         
         if (hostname == null || hostname.trim().equals("")) {
             throw new MissingResourceException("El archivo db.properties no contiene la propiedad 'db_hostname'", dbProperties.getClass().getName(), "db_hostname");
@@ -70,6 +71,8 @@ public class DB {
             throw new MissingResourceException("El archivo db.properties no contiene la propiedad 'db_hostname'", dbProperties.getClass().getName(), "db_password");
         } else if (nombre == null || nombre.trim().equals("")) {
             throw new MissingResourceException("El archivo db.properties no contiene la propiedad 'db_nombre'", dbProperties.getClass().getName(), "db_nombre");
+        } else if (timezone == null || timezone.trim().equals("")) {
+            throw new MissingResourceException("El archivo db.properties no contiene la propiedad 'db_timezone'", dbProperties.getClass().getName(), "db_timezone");
         }
         
         /*
@@ -80,7 +83,7 @@ public class DB {
         Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
         
         // Se preparan los parámetros de conexión en forma de una URL JDBC.
-        final String formatoURL = "jdbc:mysql://%s:%s/%s";
+        final String formatoURL = "jdbc:mysql://%s:%s/%s?serverTimezone=%s";
         final String URL = String.format(
             // String de formato
             formatoURL,
@@ -88,7 +91,8 @@ public class DB {
             // Parámetros usados para llenar el formato
             hostname,
             puerto,
-            nombre
+            nombre,
+            timezone
         );
         
         // Se intenta establacer una conexión con la base de datos.

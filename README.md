@@ -18,6 +18,7 @@ db_puerto=3306
 db_usuario=root
 db_password=abc123
 db_nombre=mi_tabla
+db_timezone=UTC
 ```
 
 ## DDL (SQL) de Prueba
