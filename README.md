@@ -6,11 +6,13 @@ Los datos críticos tales como el hostname, puerto, usuario y contraseña de la 
 
 ## Ejemplo de `db.properties`
 
-```db_hostname=localhost
+```
+db_hostname=localhost
 db_puerto=3306
 db_usuario=root
 db_password=abc123
-db_nombre=mi_table```
+db_nombre=mi_table
+```
 
 ## Entorno
 
