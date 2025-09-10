@@ -26,7 +26,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jTabbedPane1" alignment="0" pref="800" max="32767" attributes="0"/>
+          <Component id="jTabbedPane1" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -128,14 +128,6 @@
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldPais">
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabelCiudad">
-              <Properties>
-                <Property name="horizontalAlignment" type="int" value="4"/>
-                <Property name="text" type="java.lang.String" value="Ciudad"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="jTextFieldCiudad">
-            </Component>
             <Component class="javax.swing.JLabel" name="jLabelDepartamento">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="4"/>
@@ -143,6 +135,14 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldDepartamento">
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabelCiudad">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="4"/>
+                <Property name="text" type="java.lang.String" value="Ciudad"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextFieldCiudad">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelDireccionPrimeraLinea">
               <Properties>

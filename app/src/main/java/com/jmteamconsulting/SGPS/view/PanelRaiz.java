@@ -4,7 +4,10 @@
  */
 package com.jmteamconsulting.SGPS.view;
 
-import com.jmteamconsulting.SGPS.controller.Usuario;
+import com.jmteamconsulting.SGPS.controller.ControladorUsuario;
+import com.jmteamconsulting.SGPS.model.Usuario;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -64,10 +67,10 @@ public class PanelRaiz extends javax.swing.JFrame {
         jTextFieldTelefono = new javax.swing.JTextField();
         jLabelPais = new javax.swing.JLabel();
         jTextFieldPais = new javax.swing.JTextField();
-        jLabelCiudad = new javax.swing.JLabel();
-        jTextFieldCiudad = new javax.swing.JTextField();
         jLabelDepartamento = new javax.swing.JLabel();
         jTextFieldDepartamento = new javax.swing.JTextField();
+        jLabelCiudad = new javax.swing.JLabel();
+        jTextFieldCiudad = new javax.swing.JTextField();
         jLabelDireccionPrimeraLinea = new javax.swing.JLabel();
         jTextFieldDireccionPrimeraLinea = new javax.swing.JTextField();
         jLabelDireccionSegundaLinea = new javax.swing.JLabel();
@@ -128,15 +131,15 @@ public class PanelRaiz extends javax.swing.JFrame {
         jPanel1.add(jLabelPais);
         jPanel1.add(jTextFieldPais);
 
-        jLabelCiudad.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabelCiudad.setText("Ciudad");
-        jPanel1.add(jLabelCiudad);
-        jPanel1.add(jTextFieldCiudad);
-
         jLabelDepartamento.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelDepartamento.setText("Departamento");
         jPanel1.add(jLabelDepartamento);
         jPanel1.add(jTextFieldDepartamento);
+
+        jLabelCiudad.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelCiudad.setText("Ciudad");
+        jPanel1.add(jLabelCiudad);
+        jPanel1.add(jTextFieldCiudad);
 
         jLabelDireccionPrimeraLinea.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelDireccionPrimeraLinea.setText("Dirección (primera línea):");
@@ -240,7 +243,7 @@ public class PanelRaiz extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -270,8 +273,38 @@ public class PanelRaiz extends javax.swing.JFrame {
      */
     private void jButtonCrearUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCrearUsuarioActionPerformed
         // Se intenta crear un objeto Usuario a partir de los datos ingresados.
+        Usuario usuario = new Usuario(
+            null, // id
+            this.jTextFieldNumeroDocumento.getText(),
+            this.jTextFieldEmail.getText(),
+            this.jTextFieldPrimerNombre.getText(),
+            this.jTextFieldSegundoNombre.getText(),
+            this.jTextFieldPrimerApellido.getText(),
+            this.jTextFieldSegundoApellido.getText(),
+            this.jTextFieldTelefono.getText(),
+            this.jTextFieldPais.getText(),
+            this.jTextFieldDepartamento.getText(),
+            this.jTextFieldCiudad.getText(),
+            this.jTextFieldDireccionPrimeraLinea.getText(),
+            this.jTextFieldDireccionSegundaLinea.getText(),
+            this.jTextFieldCodigoZIP.getText() 
+        );
         
-        Usuario usuario = new Usuario();
+        // Se intenta insertar el objeto usuario en la base de datos
+        final long id;
+        
+        try {   
+            id = ControladorUsuario.crearUsuario(usuario);
+        } catch (SQLException ex) {
+            // Error SQL. Se muestra información de la excepción al usuario.
+            System.getLogger(PanelRaiz.class.getName()).log(System.Logger.Level.ERROR, "Error creando usuario", ex);
+            JOptionPane.showMessageDialog(this, "Error creando usuario:\n\n" + ex.getMessage(), "Error SQL", JOptionPane.ERROR_MESSAGE);
+            
+            return;
+        }
+        
+        // Se muestra mensaje de éxito con el ID del usuario creado.
+        JOptionPane.showMessageDialog(this, "Usuario creado exitosamente con un ID de:\n\n" + id, "Éxito", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jButtonCrearUsuarioActionPerformed
 
     /**
@@ -296,7 +329,11 @@ public class PanelRaiz extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new PanelRaiz().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> {
+            PanelRaiz raiz = new PanelRaiz();
+            raiz.setLocationRelativeTo(null);
+            raiz.setVisible(true);
+        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
