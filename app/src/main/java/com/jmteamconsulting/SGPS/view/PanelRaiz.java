@@ -48,6 +48,7 @@ public class PanelRaiz extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
@@ -84,74 +85,93 @@ public class PanelRaiz extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
+        jPanel9 = new javax.swing.JPanel();
+        jLabelEliminar = new javax.swing.JLabel();
+        jTextFieldIDEliminar = new javax.swing.JTextField();
+        jButtonEliminarUsuario = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(800, 600));
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(8, 16, 8, 16));
+        jPanel1.setMaximumSize(null);
+        jPanel1.setMinimumSize(null);
         jPanel1.setLayout(new java.awt.GridLayout(15, 2, 16, 4));
 
         jLabelNumeroDocumento.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelNumeroDocumento.setLabelFor(jLabelNumeroDocumento);
         jLabelNumeroDocumento.setText("Número de documento:");
         jPanel1.add(jLabelNumeroDocumento);
         jPanel1.add(jTextFieldNumeroDocumento);
 
         jLabelEmail.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelEmail.setLabelFor(jLabelEmail);
         jLabelEmail.setText("Email:");
         jPanel1.add(jLabelEmail);
         jPanel1.add(jTextFieldEmail);
 
         jLabelPrimerNombre.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelPrimerNombre.setLabelFor(jLabelPrimerNombre);
         jLabelPrimerNombre.setText("Primer nombre:");
         jPanel1.add(jLabelPrimerNombre);
         jPanel1.add(jTextFieldPrimerNombre);
 
         jLabelSegundoNombre.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelSegundoNombre.setLabelFor(jLabelSegundoNombre);
         jLabelSegundoNombre.setText("Segundo nombre:");
         jPanel1.add(jLabelSegundoNombre);
         jPanel1.add(jTextFieldSegundoNombre);
 
         jLabelPrimerApellido.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelPrimerApellido.setLabelFor(jLabelPrimerApellido);
         jLabelPrimerApellido.setText("Primer apellido:");
         jPanel1.add(jLabelPrimerApellido);
         jPanel1.add(jTextFieldPrimerApellido);
 
         jLabelSegundoApellido.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelSegundoApellido.setLabelFor(jLabelSegundoApellido);
         jLabelSegundoApellido.setText("Segundo apellido:");
         jPanel1.add(jLabelSegundoApellido);
         jPanel1.add(jTextFieldSegundoApellido);
 
         jLabelTelefono.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelTelefono.setLabelFor(jLabelTelefono);
         jLabelTelefono.setText("Teléfono:");
         jPanel1.add(jLabelTelefono);
         jPanel1.add(jTextFieldTelefono);
 
         jLabelPais.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelPais.setLabelFor(jLabelPais);
         jLabelPais.setText("País:");
         jPanel1.add(jLabelPais);
         jPanel1.add(jTextFieldPais);
 
         jLabelDepartamento.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelDepartamento.setLabelFor(jLabelDepartamento);
         jLabelDepartamento.setText("Departamento");
         jPanel1.add(jLabelDepartamento);
         jPanel1.add(jTextFieldDepartamento);
 
         jLabelCiudad.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelCiudad.setLabelFor(jLabelCiudad);
         jLabelCiudad.setText("Ciudad");
         jPanel1.add(jLabelCiudad);
         jPanel1.add(jTextFieldCiudad);
 
         jLabelDireccionPrimeraLinea.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelDireccionPrimeraLinea.setLabelFor(jLabelDireccionPrimeraLinea);
         jLabelDireccionPrimeraLinea.setText("Dirección (primera línea):");
         jPanel1.add(jLabelDireccionPrimeraLinea);
         jPanel1.add(jTextFieldDireccionPrimeraLinea);
 
         jLabelDireccionSegundaLinea.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelDireccionSegundaLinea.setLabelFor(jLabelDireccionSegundaLinea);
         jLabelDireccionSegundaLinea.setText("Dirección (segunda línea):");
         jPanel1.add(jLabelDireccionSegundaLinea);
         jPanel1.add(jTextFieldDireccionSegundaLinea);
 
         jLabelCodigoZIP.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelCodigoZIP.setLabelFor(jLabelCodigoZIP);
         jLabelCodigoZIP.setText("Código de área (ZIP):");
         jPanel1.add(jLabelCodigoZIP);
         jPanel1.add(jTextFieldCodigoZIP);
@@ -200,6 +220,9 @@ public class PanelRaiz extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Crear", null, jPanel1, "");
 
+        jPanel2.setMaximumSize(null);
+        jPanel2.setMinimumSize(null);
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -212,6 +235,9 @@ public class PanelRaiz extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Leer", jPanel2);
+
+        jPanel3.setMaximumSize(null);
+        jPanel3.setMinimumSize(null);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -226,16 +252,34 @@ public class PanelRaiz extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Actualizar", jPanel3);
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 565, Short.MAX_VALUE)
-        );
+        jPanel4.setLayout(new java.awt.GridBagLayout());
+
+        jPanel7.setLayout(new javax.swing.BoxLayout(jPanel7, javax.swing.BoxLayout.PAGE_AXIS));
+
+        jPanel9.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 16, 16));
+
+        jLabelEliminar.setLabelFor(jTextFieldIDEliminar);
+        jLabelEliminar.setText("ID de usuario a eliminar:");
+        jPanel9.add(jLabelEliminar);
+
+        jTextFieldIDEliminar.setPreferredSize(new java.awt.Dimension(100, 23));
+        jPanel9.add(jTextFieldIDEliminar);
+
+        jPanel7.add(jPanel9);
+
+        jButtonEliminarUsuario.setText("Eliminar Usuario");
+        jButtonEliminarUsuario.setAlignmentX(0.5F);
+        jButtonEliminarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEliminarUsuarioActionPerformed(evt);
+            }
+        });
+        jPanel7.add(jButtonEliminarUsuario);
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        jPanel4.add(jPanel7, gridBagConstraints);
 
         jTabbedPane1.addTab("Eliminar", jPanel4);
 
@@ -308,6 +352,51 @@ public class PanelRaiz extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonCrearUsuarioActionPerformed
 
     /**
+     * Handler de click de botón de eliminación de usuario.
+     * 
+     * @param evt Evento AWT generado.
+     */
+    private void jButtonEliminarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminarUsuarioActionPerformed
+        // Primero se obtiene el ID ingresado.
+        final String idString = this.jTextFieldIDEliminar.getText();
+        final long id;
+        
+        // Se intenta convertir a número entero.
+        try {
+            id = Long.parseLong(idString);
+        } catch (NumberFormatException ex) {
+            // Se muestra mensaje de error en caso de haber ocurrido un error.
+            System.getLogger(PanelRaiz.class.getName()).log(System.Logger.Level.ERROR, "Error de formato", ex);
+            JOptionPane.showMessageDialog(this, "La ID ingresada debe ser un numero entero:\n\n" + ex.getMessage(), "Error de formato", JOptionPane.ERROR_MESSAGE);
+            
+            return;
+        }
+        
+        // Se intenta eliminar el registro. Se usa executeUpdate para obtener los resultados.
+        final int filasEliminadas;
+        
+        try {   
+            filasEliminadas = ControladorUsuario.eliminarUsuario(id);
+        } catch (SQLException ex) {
+            // Error SQL. Se muestra información de la excepción al usuario.
+            System.getLogger(PanelRaiz.class.getName()).log(System.Logger.Level.ERROR, "Error eliminando usuario", ex);
+            JOptionPane.showMessageDialog(this, "Error eliminando usuario:\n\n" + ex.getMessage(), "Error SQL", JOptionPane.ERROR_MESSAGE);
+            
+            return;
+        }
+        
+        // Registro eliminado exitosamente. Se le informa al usuario.
+        if (filasEliminadas > 0) {
+            JOptionPane.showMessageDialog(this, "Usuario eliminado exitosamente", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+            return;
+        }
+        
+        // Registro no eliminado. Posiblemente el registro no existía.
+        System.getLogger(PanelRaiz.class.getName()).log(System.Logger.Level.ERROR, "Error eliminando usuario");
+        JOptionPane.showMessageDialog(this, "No pudo el usuario con el ID especificado.\nAsegurese de que existe un usuario con el ID: " + id, "Error de eliminación", JOptionPane.ERROR_MESSAGE);
+    }//GEN-LAST:event_jButtonEliminarUsuarioActionPerformed
+
+    /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
@@ -339,11 +428,13 @@ public class PanelRaiz extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonBorrarTodo;
     private javax.swing.JButton jButtonCrearUsuario;
+    private javax.swing.JButton jButtonEliminarUsuario;
     private javax.swing.JLabel jLabelCiudad;
     private javax.swing.JLabel jLabelCodigoZIP;
     private javax.swing.JLabel jLabelDepartamento;
     private javax.swing.JLabel jLabelDireccionPrimeraLinea;
     private javax.swing.JLabel jLabelDireccionSegundaLinea;
+    private javax.swing.JLabel jLabelEliminar;
     private javax.swing.JLabel jLabelEmail;
     private javax.swing.JLabel jLabelNumeroDocumento;
     private javax.swing.JLabel jLabelPais;
@@ -358,6 +449,8 @@ public class PanelRaiz extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextFieldCiudad;
     private javax.swing.JTextField jTextFieldCodigoZIP;
@@ -365,6 +458,7 @@ public class PanelRaiz extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldDireccionPrimeraLinea;
     private javax.swing.JTextField jTextFieldDireccionSegundaLinea;
     private javax.swing.JTextField jTextFieldEmail;
+    private javax.swing.JTextField jTextFieldIDEliminar;
     private javax.swing.JTextField jTextFieldNumeroDocumento;
     private javax.swing.JTextField jTextFieldPais;
     private javax.swing.JTextField jTextFieldPrimerApellido;

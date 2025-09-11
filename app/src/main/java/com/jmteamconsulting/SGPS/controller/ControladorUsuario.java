@@ -56,7 +56,20 @@ public class ControladorUsuario {
         
     }
     
-    public static void eliminarUsuario() {
+    /**
+     * Elimina un registro usuario de la base de datos, usando su ID.
+     * 
+     * @param id Id numérico del usuario a eliminar; PK.
+     * @throws SQLException En caso de ocurrir un error SQL.
+     */
+    public static int eliminarUsuario(long id) throws SQLException {
+        // Se obtiene referencia a la base de datos que ya debe estar inicializada.
+        final Connection conexion = DB.getConexion();
         
+        // Se intenta eliminar el registro de la base de datos.
+        final String formatoConsulta = "DELETE FROM usuario WHERE id=?;";
+        final PreparedStatement sentencia = conexion.prepareStatement(formatoConsulta);
+        sentencia.setLong(1, id);
+        return sentencia.executeUpdate();
     }
 }
