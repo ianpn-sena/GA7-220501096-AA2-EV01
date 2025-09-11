@@ -41,6 +41,23 @@ public class PanelRaiz extends javax.swing.JFrame {
             jTextFieldSegundoNombre,
             jTextFieldTelefono,
         };
+
+        this.PESTANA_ACTUALIZAR_CAMPOS_DE_ENTRADA = new javax.swing.JTextField[] {
+            jTextFieldIDActualizar,
+            jTextFieldCiudad2,
+            jTextFieldCodigoZIP2,
+            jTextFieldDepartamento2,
+            jTextFieldDireccionPrimeraLinea2,
+            jTextFieldDireccionSegundaLinea2,
+            jTextFieldEmail2,
+            jTextFieldNumeroDocumento2,
+            jTextFieldPais2,
+            jTextFieldPrimerApellido2,
+            jTextFieldPrimerNombre2,
+            jTextFieldSegundoApellido2,
+            jTextFieldSegundoNombre2,
+            jTextFieldTelefono2,
+        };
     }
 
     /**
@@ -131,6 +148,41 @@ public class PanelRaiz extends javax.swing.JFrame {
         jPanel18 = new javax.swing.JPanel();
         jButtonCargarUsuarios = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
+        jPanel19 = new javax.swing.JPanel();
+        jLabelIDActualizar = new javax.swing.JLabel();
+        jTextFieldIDActualizar = new javax.swing.JTextField();
+        jPanel22 = new javax.swing.JPanel();
+        jPanel23 = new javax.swing.JPanel();
+        jLabelNumeroDocumento2 = new javax.swing.JLabel();
+        jTextFieldNumeroDocumento2 = new javax.swing.JTextField();
+        jLabelEmail2 = new javax.swing.JLabel();
+        jTextFieldEmail2 = new javax.swing.JTextField();
+        jLabelPrimerNombre2 = new javax.swing.JLabel();
+        jTextFieldPrimerNombre2 = new javax.swing.JTextField();
+        jLabelSegundoNombre2 = new javax.swing.JLabel();
+        jTextFieldSegundoNombre2 = new javax.swing.JTextField();
+        jLabelPrimerApellido2 = new javax.swing.JLabel();
+        jTextFieldPrimerApellido2 = new javax.swing.JTextField();
+        jLabelSegundoApellido2 = new javax.swing.JLabel();
+        jTextFieldSegundoApellido2 = new javax.swing.JTextField();
+        jLabelTelefono2 = new javax.swing.JLabel();
+        jTextFieldTelefono2 = new javax.swing.JTextField();
+        jLabelPais2 = new javax.swing.JLabel();
+        jTextFieldPais2 = new javax.swing.JTextField();
+        jLabelDepartamento2 = new javax.swing.JLabel();
+        jTextFieldDepartamento2 = new javax.swing.JTextField();
+        jLabelCiudad2 = new javax.swing.JLabel();
+        jTextFieldCiudad2 = new javax.swing.JTextField();
+        jLabelDireccionPrimeraLinea2 = new javax.swing.JLabel();
+        jTextFieldDireccionPrimeraLinea2 = new javax.swing.JTextField();
+        jLabelDireccionSegundaLinea2 = new javax.swing.JLabel();
+        jTextFieldDireccionSegundaLinea2 = new javax.swing.JTextField();
+        jLabelCodigoZIP2 = new javax.swing.JLabel();
+        jTextFieldCodigoZIP2 = new javax.swing.JTextField();
+        jPanel20 = new javax.swing.JPanel();
+        jPanel21 = new javax.swing.JPanel();
+        jButtonBorrarTodo1 = new javax.swing.JButton();
+        jButtonCrearUsuario1 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
@@ -507,15 +559,181 @@ public class PanelRaiz extends javax.swing.JFrame {
         jPanel3.setMaximumSize(null);
         jPanel3.setMinimumSize(null);
 
+        jPanel19.setBorder(javax.swing.BorderFactory.createEmptyBorder(8, 16, 8, 16));
+        jPanel19.setMaximumSize(null);
+        jPanel19.setLayout(new java.awt.GridLayout(17, 2, 16, 4));
+
+        jLabelIDActualizar.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelIDActualizar.setLabelFor(jLabelNumeroDocumento);
+        jLabelIDActualizar.setText("ID de usuario:");
+        jPanel19.add(jLabelIDActualizar);
+        jPanel19.add(jTextFieldIDActualizar);
+
+        javax.swing.GroupLayout jPanel22Layout = new javax.swing.GroupLayout(jPanel22);
+        jPanel22.setLayout(jPanel22Layout);
+        jPanel22Layout.setHorizontalGroup(
+            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 381, Short.MAX_VALUE)
+        );
+        jPanel22Layout.setVerticalGroup(
+            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 29, Short.MAX_VALUE)
+        );
+
+        jPanel19.add(jPanel22);
+
+        javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
+        jPanel23.setLayout(jPanel23Layout);
+        jPanel23Layout.setHorizontalGroup(
+            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 381, Short.MAX_VALUE)
+        );
+        jPanel23Layout.setVerticalGroup(
+            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 29, Short.MAX_VALUE)
+        );
+
+        jPanel19.add(jPanel23);
+
+        jLabelNumeroDocumento2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelNumeroDocumento2.setLabelFor(jLabelNumeroDocumento);
+        jLabelNumeroDocumento2.setText("Número de documento:");
+        jPanel19.add(jLabelNumeroDocumento2);
+        jPanel19.add(jTextFieldNumeroDocumento2);
+
+        jLabelEmail2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelEmail2.setLabelFor(jLabelEmail);
+        jLabelEmail2.setText("Email:");
+        jPanel19.add(jLabelEmail2);
+        jPanel19.add(jTextFieldEmail2);
+
+        jLabelPrimerNombre2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelPrimerNombre2.setLabelFor(jLabelPrimerNombre);
+        jLabelPrimerNombre2.setText("Primer nombre:");
+        jPanel19.add(jLabelPrimerNombre2);
+        jPanel19.add(jTextFieldPrimerNombre2);
+
+        jLabelSegundoNombre2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelSegundoNombre2.setLabelFor(jLabelSegundoNombre);
+        jLabelSegundoNombre2.setText("Segundo nombre:");
+        jPanel19.add(jLabelSegundoNombre2);
+        jPanel19.add(jTextFieldSegundoNombre2);
+
+        jLabelPrimerApellido2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelPrimerApellido2.setLabelFor(jLabelPrimerApellido);
+        jLabelPrimerApellido2.setText("Primer apellido:");
+        jPanel19.add(jLabelPrimerApellido2);
+        jPanel19.add(jTextFieldPrimerApellido2);
+
+        jLabelSegundoApellido2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelSegundoApellido2.setLabelFor(jLabelSegundoApellido);
+        jLabelSegundoApellido2.setText("Segundo apellido:");
+        jPanel19.add(jLabelSegundoApellido2);
+        jPanel19.add(jTextFieldSegundoApellido2);
+
+        jLabelTelefono2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelTelefono2.setLabelFor(jLabelTelefono);
+        jLabelTelefono2.setText("Teléfono:");
+        jPanel19.add(jLabelTelefono2);
+        jPanel19.add(jTextFieldTelefono2);
+
+        jLabelPais2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelPais2.setLabelFor(jLabelPais);
+        jLabelPais2.setText("País:");
+        jPanel19.add(jLabelPais2);
+        jPanel19.add(jTextFieldPais2);
+
+        jLabelDepartamento2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelDepartamento2.setLabelFor(jLabelDepartamento);
+        jLabelDepartamento2.setText("Departamento");
+        jPanel19.add(jLabelDepartamento2);
+        jPanel19.add(jTextFieldDepartamento2);
+
+        jLabelCiudad2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelCiudad2.setLabelFor(jLabelCiudad);
+        jLabelCiudad2.setText("Ciudad");
+        jPanel19.add(jLabelCiudad2);
+        jPanel19.add(jTextFieldCiudad2);
+
+        jLabelDireccionPrimeraLinea2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelDireccionPrimeraLinea2.setLabelFor(jLabelDireccionPrimeraLinea);
+        jLabelDireccionPrimeraLinea2.setText("Dirección (primera línea):");
+        jPanel19.add(jLabelDireccionPrimeraLinea2);
+        jPanel19.add(jTextFieldDireccionPrimeraLinea2);
+
+        jLabelDireccionSegundaLinea2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelDireccionSegundaLinea2.setLabelFor(jLabelDireccionSegundaLinea);
+        jLabelDireccionSegundaLinea2.setText("Dirección (segunda línea):");
+        jPanel19.add(jLabelDireccionSegundaLinea2);
+        jPanel19.add(jTextFieldDireccionSegundaLinea2);
+
+        jLabelCodigoZIP2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelCodigoZIP2.setLabelFor(jLabelCodigoZIP);
+        jLabelCodigoZIP2.setText("Código de área (ZIP):");
+        jPanel19.add(jLabelCodigoZIP2);
+        jPanel19.add(jTextFieldCodigoZIP2);
+
+        javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
+        jPanel20.setLayout(jPanel20Layout);
+        jPanel20Layout.setHorizontalGroup(
+            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 381, Short.MAX_VALUE)
+        );
+        jPanel20Layout.setVerticalGroup(
+            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 29, Short.MAX_VALUE)
+        );
+
+        jPanel19.add(jPanel20);
+
+        javax.swing.GroupLayout jPanel21Layout = new javax.swing.GroupLayout(jPanel21);
+        jPanel21.setLayout(jPanel21Layout);
+        jPanel21Layout.setHorizontalGroup(
+            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 381, Short.MAX_VALUE)
+        );
+        jPanel21Layout.setVerticalGroup(
+            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 29, Short.MAX_VALUE)
+        );
+
+        jPanel19.add(jPanel21);
+
+        jButtonBorrarTodo1.setText("Borrar Todo");
+        jButtonBorrarTodo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonBorrarTodo1ActionPerformed(evt);
+            }
+        });
+        jPanel19.add(jButtonBorrarTodo1);
+
+        jButtonCrearUsuario1.setText("Actualizar Usuario");
+        jButtonCrearUsuario1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonActualizarUsuarioActionPerformed(evt);
+            }
+        });
+        jPanel19.add(jButtonCrearUsuario1);
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 810, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, 810, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 575, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, 575, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jTabbedPane1.addTab("Actualizar", jPanel3);
@@ -655,7 +873,6 @@ public class PanelRaiz extends javax.swing.JFrame {
 
         // Registro no eliminado. Posiblemente el registro no existía.        
         if (filasEliminadas == 0) {
-
             System.getLogger(PanelRaiz.class.getName()).log(System.Logger.Level.ERROR, "Error eliminando usuario");
             JOptionPane.showMessageDialog(this, "No se pudo eliminar el usuario con el ID especificado.\nAsegurese de que existe un usuario con el ID: " + id, "Error de eliminación", JOptionPane.ERROR_MESSAGE);
             return;
@@ -773,6 +990,82 @@ public class PanelRaiz extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonCargarUsuariosActionPerformed
 
     /**
+     * Método ejecutado al hacer click en el botón Borrar Todo de la pestaña
+     * Actualizar del JFrame principal.
+     * 
+     * @param evt Evento AWT generado.
+     */
+    private void jButtonBorrarTodo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBorrarTodo1ActionPerformed
+        for (javax.swing.JTextField campo: this.PESTANA_ACTUALIZAR_CAMPOS_DE_ENTRADA) {
+            campo.setText("");
+        }
+    }//GEN-LAST:event_jButtonBorrarTodo1ActionPerformed
+
+    /**
+     * Método ejecutado al hacer click en el botón Actualizar Usuario en la pestaña
+     * Actualizar.
+     * 
+     * @param evt Evento AWT generado.
+     */
+    private void jButtonActualizarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonActualizarUsuarioActionPerformed
+        // Se obtiene el ID ingresado.
+        final String idString = this.jTextFieldIDActualizar.getText();
+        final long id;
+        
+        // Se intenta convertir a número entero.
+        try {
+            id = Long.parseLong(idString);
+        } catch (NumberFormatException ex) {
+            // Se muestra mensaje de error en caso de haber ocurrido un error.
+            System.getLogger(PanelRaiz.class.getName()).log(System.Logger.Level.ERROR, "Error de formato", ex);
+            JOptionPane.showMessageDialog(this, "La ID ingresada debe ser un numero entero:\n\n" + ex.getMessage(), "Error de formato", JOptionPane.ERROR_MESSAGE);
+            
+            return;
+        }
+
+        // Se intenta crear un objeto Usuario a partir de los datos ingresados.
+        Usuario usuario = new Usuario(
+            id,
+            this.jTextFieldNumeroDocumento2.getText(),
+            this.jTextFieldEmail2.getText(),
+            this.jTextFieldPrimerNombre2.getText(),
+            this.jTextFieldSegundoNombre2.getText(),
+            this.jTextFieldPrimerApellido2.getText(),
+            this.jTextFieldSegundoApellido2.getText(),
+            this.jTextFieldTelefono2.getText(),
+            this.jTextFieldPais2.getText(),
+            this.jTextFieldDepartamento2.getText(),
+            this.jTextFieldCiudad2.getText(),
+            this.jTextFieldDireccionPrimeraLinea2.getText(),
+            this.jTextFieldDireccionSegundaLinea2.getText(),
+            this.jTextFieldCodigoZIP2.getText() 
+        );
+        
+        // Se intenta actualizar el objeto usuario en la base de datos
+        final int filasActualizadas;
+        
+        try {   
+            filasActualizadas = ControladorUsuario.actualizarUsuario(usuario);
+        } catch (SQLException ex) {
+            // Error SQL. Se muestra información de la excepción al usuario.
+            System.getLogger(PanelRaiz.class.getName()).log(System.Logger.Level.ERROR, "Error creando usuario", ex);
+            JOptionPane.showMessageDialog(this, "Error creando usuario:\n\n" + ex.getMessage(), "Error SQL", JOptionPane.ERROR_MESSAGE);
+            
+            return;
+        }
+        
+        // Registro no actualizado. Posiblemente el registro no existía.        
+        if (filasActualizadas == 0) {
+            System.getLogger(PanelRaiz.class.getName()).log(System.Logger.Level.ERROR, "Error actualizando usuario");
+            JOptionPane.showMessageDialog(this, "No se pudo actualizar el usuario con el ID especificado.\nAsegurese de que existe un usuario con el ID: " + id, "Error de actualización", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        
+        // Se muestra mensaje de éxito con el ID del usuario creado.
+        JOptionPane.showMessageDialog(this, "Usuario actualizado exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_jButtonActualizarUsuarioActionPerformed
+
+    /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
@@ -803,38 +1096,54 @@ public class PanelRaiz extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonBorrarTodo;
+    private javax.swing.JButton jButtonBorrarTodo1;
     private javax.swing.JButton jButtonCargarUsuarios;
     private javax.swing.JButton jButtonConsultarUsuario;
     private javax.swing.JButton jButtonCrearUsuario;
+    private javax.swing.JButton jButtonCrearUsuario1;
     private javax.swing.JButton jButtonEliminarUsuario;
     private javax.swing.JLabel jLabelCiudad;
     private javax.swing.JLabel jLabelCiudad1;
+    private javax.swing.JLabel jLabelCiudad2;
     private javax.swing.JLabel jLabelCodigoZIP;
     private javax.swing.JLabel jLabelCodigoZIP1;
+    private javax.swing.JLabel jLabelCodigoZIP2;
     private javax.swing.JLabel jLabelConsultar;
     private javax.swing.JLabel jLabelDepartamento;
     private javax.swing.JLabel jLabelDepartamento1;
+    private javax.swing.JLabel jLabelDepartamento2;
     private javax.swing.JLabel jLabelDireccionPrimeraLinea;
     private javax.swing.JLabel jLabelDireccionPrimeraLinea1;
+    private javax.swing.JLabel jLabelDireccionPrimeraLinea2;
     private javax.swing.JLabel jLabelDireccionSegundaLinea;
     private javax.swing.JLabel jLabelDireccionSegundaLinea1;
+    private javax.swing.JLabel jLabelDireccionSegundaLinea2;
     private javax.swing.JLabel jLabelEliminar;
     private javax.swing.JLabel jLabelEmail;
     private javax.swing.JLabel jLabelEmail1;
+    private javax.swing.JLabel jLabelEmail2;
+    private javax.swing.JLabel jLabelIDActualizar;
     private javax.swing.JLabel jLabelNumeroDocumento;
     private javax.swing.JLabel jLabelNumeroDocumento1;
+    private javax.swing.JLabel jLabelNumeroDocumento2;
     private javax.swing.JLabel jLabelPais;
     private javax.swing.JLabel jLabelPais1;
+    private javax.swing.JLabel jLabelPais2;
     private javax.swing.JLabel jLabelPrimerApellido;
     private javax.swing.JLabel jLabelPrimerApellido1;
+    private javax.swing.JLabel jLabelPrimerApellido2;
     private javax.swing.JLabel jLabelPrimerNombre;
     private javax.swing.JLabel jLabelPrimerNombre1;
+    private javax.swing.JLabel jLabelPrimerNombre2;
     private javax.swing.JLabel jLabelSegundoApellido;
     private javax.swing.JLabel jLabelSegundoApellido1;
+    private javax.swing.JLabel jLabelSegundoApellido2;
     private javax.swing.JLabel jLabelSegundoNombre;
     private javax.swing.JLabel jLabelSegundoNombre1;
+    private javax.swing.JLabel jLabelSegundoNombre2;
     private javax.swing.JLabel jLabelTelefono;
     private javax.swing.JLabel jLabelTelefono1;
+    private javax.swing.JLabel jLabelTelefono2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -845,7 +1154,12 @@ public class PanelRaiz extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
+    private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel20;
+    private javax.swing.JPanel jPanel21;
+    private javax.swing.JPanel jPanel22;
+    private javax.swing.JPanel jPanel23;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
@@ -860,33 +1174,48 @@ public class PanelRaiz extends javax.swing.JFrame {
     private javax.swing.JTable jTableUsuarios;
     private javax.swing.JTextField jTextFieldCiudad;
     private javax.swing.JTextField jTextFieldCiudad1;
+    private javax.swing.JTextField jTextFieldCiudad2;
     private javax.swing.JTextField jTextFieldCodigoZIP;
     private javax.swing.JTextField jTextFieldCodigoZIP1;
+    private javax.swing.JTextField jTextFieldCodigoZIP2;
     private javax.swing.JTextField jTextFieldDepartamento;
     private javax.swing.JTextField jTextFieldDepartamento1;
+    private javax.swing.JTextField jTextFieldDepartamento2;
     private javax.swing.JTextField jTextFieldDireccionPrimeraLinea;
     private javax.swing.JTextField jTextFieldDireccionPrimeraLinea1;
+    private javax.swing.JTextField jTextFieldDireccionPrimeraLinea2;
     private javax.swing.JTextField jTextFieldDireccionSegundaLinea;
     private javax.swing.JTextField jTextFieldDireccionSegundaLinea1;
+    private javax.swing.JTextField jTextFieldDireccionSegundaLinea2;
     private javax.swing.JTextField jTextFieldEmail;
     private javax.swing.JTextField jTextFieldEmail1;
+    private javax.swing.JTextField jTextFieldEmail2;
+    private javax.swing.JTextField jTextFieldIDActualizar;
     private javax.swing.JTextField jTextFieldIDConsultar;
     private javax.swing.JTextField jTextFieldIDEliminar;
     private javax.swing.JTextField jTextFieldNumeroDocumento;
     private javax.swing.JTextField jTextFieldNumeroDocumento1;
+    private javax.swing.JTextField jTextFieldNumeroDocumento2;
     private javax.swing.JTextField jTextFieldPais;
     private javax.swing.JTextField jTextFieldPais1;
+    private javax.swing.JTextField jTextFieldPais2;
     private javax.swing.JTextField jTextFieldPrimerApellido;
     private javax.swing.JTextField jTextFieldPrimerApellido1;
+    private javax.swing.JTextField jTextFieldPrimerApellido2;
     private javax.swing.JTextField jTextFieldPrimerNombre;
     private javax.swing.JTextField jTextFieldPrimerNombre1;
+    private javax.swing.JTextField jTextFieldPrimerNombre2;
     private javax.swing.JTextField jTextFieldSegundoApellido;
     private javax.swing.JTextField jTextFieldSegundoApellido1;
+    private javax.swing.JTextField jTextFieldSegundoApellido2;
     private javax.swing.JTextField jTextFieldSegundoNombre;
     private javax.swing.JTextField jTextFieldSegundoNombre1;
+    private javax.swing.JTextField jTextFieldSegundoNombre2;
     private javax.swing.JTextField jTextFieldTelefono;
     private javax.swing.JTextField jTextFieldTelefono1;
+    private javax.swing.JTextField jTextFieldTelefono2;
     // End of variables declaration//GEN-END:variables
 
     private final javax.swing.JTextField[] PESTANA_CREAR_CAMPOS_DE_ENTRADA;
+    private final javax.swing.JTextField[] PESTANA_ACTUALIZAR_CAMPOS_DE_ENTRADA;
 }

@@ -142,8 +142,38 @@ public class ControladorUsuario {
         return usuarios;
     }
     
-    public static void actualizarUsuario() {
+    /**
+     * Actualiza los datos de un usuario en la base de datos. El usuario actualizado
+     * tendrá el mismo ID del usuario de entrada.
+     * 
+     * @throws SQLException En caso de encontrar un error SQL.
+     */
+    public static int actualizarUsuario(Usuario usuario) throws SQLException {
+        // Se obtiene referencia a la base de datos que ya debe estar inicializada.
+        final Connection conexion = DB.getConexion();
         
+        // Se intenta actualizar el registo en la base de datos cuya ID coincida con el usuario de entrada.
+        final String formatoConsulta = "UPDATE usuario SET numero_documento=?, email=?, primer_nombre=?, segundo_nombre=?, primer_apellido=?, segundo_apellido=?, numero_telefono=?, pais=?, departamento=?, ciudad=?, direccion_linea_1=?, direccion_linea_2=?, codigo_zip=? WHERE id=?";
+        final PreparedStatement sentencia = conexion.prepareStatement(formatoConsulta);
+        final int filasActualizadas;
+        sentencia.setString(1, usuario.getNumeroDocumento());
+        sentencia.setString(2, usuario.getEmail());
+        sentencia.setString(3, usuario.getPrimerNombre());
+        sentencia.setString(4, usuario.getSegundoNombre());
+        sentencia.setString(5, usuario.getPrimerApellido());
+        sentencia.setString(6, usuario.getSegundoApellido());
+        sentencia.setString(7, usuario.getNumeroTelefono());
+        sentencia.setString(8, usuario.getPais());
+        sentencia.setString(9, usuario.getDepartamento());
+        sentencia.setString(10, usuario.getCiudad());
+        sentencia.setString(11, usuario.getDireccionLinea1());
+        sentencia.setString(12, usuario.getDireccionLinea2());
+        sentencia.setString(13, usuario.getCodigoZIP());
+        sentencia.setLong(14, usuario.getId());
+        filasActualizadas = sentencia.executeUpdate();
+        
+        // Se regresa el número de registros actualizados.
+        return filasActualizadas;
     }
     
     /**
