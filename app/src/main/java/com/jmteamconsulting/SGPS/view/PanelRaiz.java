@@ -7,7 +7,9 @@ package com.jmteamconsulting.SGPS.view;
 import com.jmteamconsulting.SGPS.controller.ControladorUsuario;
 import com.jmteamconsulting.SGPS.model.Usuario;
 import java.sql.SQLException;
+import java.util.List;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -22,6 +24,7 @@ public class PanelRaiz extends javax.swing.JFrame {
      */
     public PanelRaiz() {        
         initComponents();
+        this.jPanelResultadosUsuario.setVisible(false);
 
         this.PESTANA_CREAR_CAMPOS_DE_ENTRADA = new javax.swing.JTextField[] {
             jTextFieldCiudad,
@@ -82,7 +85,51 @@ public class PanelRaiz extends javax.swing.JFrame {
         jPanel6 = new javax.swing.JPanel();
         jButtonBorrarTodo = new javax.swing.JButton();
         jButtonCrearUsuario = new javax.swing.JButton();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
+        jPanel8 = new javax.swing.JPanel();
+        jPanel11 = new javax.swing.JPanel();
+        jPanelResultadosUsuario = new javax.swing.JPanel();
+        jLabelNumeroDocumento1 = new javax.swing.JLabel();
+        jTextFieldNumeroDocumento1 = new javax.swing.JTextField();
+        jLabelEmail1 = new javax.swing.JLabel();
+        jTextFieldEmail1 = new javax.swing.JTextField();
+        jLabelPrimerNombre1 = new javax.swing.JLabel();
+        jTextFieldPrimerNombre1 = new javax.swing.JTextField();
+        jLabelSegundoNombre1 = new javax.swing.JLabel();
+        jTextFieldSegundoNombre1 = new javax.swing.JTextField();
+        jLabelPrimerApellido1 = new javax.swing.JLabel();
+        jTextFieldPrimerApellido1 = new javax.swing.JTextField();
+        jLabelSegundoApellido1 = new javax.swing.JLabel();
+        jTextFieldSegundoApellido1 = new javax.swing.JTextField();
+        jLabelTelefono1 = new javax.swing.JLabel();
+        jTextFieldTelefono1 = new javax.swing.JTextField();
+        jLabelPais1 = new javax.swing.JLabel();
+        jTextFieldPais1 = new javax.swing.JTextField();
+        jLabelDepartamento1 = new javax.swing.JLabel();
+        jTextFieldDepartamento1 = new javax.swing.JTextField();
+        jLabelCiudad1 = new javax.swing.JLabel();
+        jTextFieldCiudad1 = new javax.swing.JTextField();
+        jLabelDireccionPrimeraLinea1 = new javax.swing.JLabel();
+        jTextFieldDireccionPrimeraLinea1 = new javax.swing.JTextField();
+        jLabelDireccionSegundaLinea1 = new javax.swing.JLabel();
+        jTextFieldDireccionSegundaLinea1 = new javax.swing.JTextField();
+        jLabelCodigoZIP1 = new javax.swing.JLabel();
+        jTextFieldCodigoZIP1 = new javax.swing.JTextField();
+        jPanel13 = new javax.swing.JPanel();
+        jPanel14 = new javax.swing.JPanel();
+        jPanel12 = new javax.swing.JPanel();
+        jLabelConsultar = new javax.swing.JLabel();
+        jTextFieldIDConsultar = new javax.swing.JTextField();
+        jButtonConsultarUsuario = new javax.swing.JButton();
+        jPanel10 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
+        jPanel15 = new javax.swing.JPanel();
+        jPanel16 = new javax.swing.JPanel();
+        jPanel17 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTableUsuarios = new javax.swing.JTable();
+        jPanel18 = new javax.swing.JPanel();
+        jButtonCargarUsuarios = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
@@ -180,11 +227,11 @@ public class PanelRaiz extends javax.swing.JFrame {
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 376, Short.MAX_VALUE)
+            .addGap(0, 381, Short.MAX_VALUE)
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 32, Short.MAX_VALUE)
+            .addGap(0, 33, Short.MAX_VALUE)
         );
 
         jPanel1.add(jPanel5);
@@ -193,11 +240,11 @@ public class PanelRaiz extends javax.swing.JFrame {
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 376, Short.MAX_VALUE)
+            .addGap(0, 381, Short.MAX_VALUE)
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 32, Short.MAX_VALUE)
+            .addGap(0, 33, Short.MAX_VALUE)
         );
 
         jPanel1.add(jPanel6);
@@ -220,21 +267,242 @@ public class PanelRaiz extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Crear", null, jPanel1, "");
 
+        jPanel8.setLayout(new java.awt.GridBagLayout());
+
+        jPanel11.setLayout(new javax.swing.BoxLayout(jPanel11, javax.swing.BoxLayout.PAGE_AXIS));
+
+        jPanelResultadosUsuario.setBorder(javax.swing.BorderFactory.createEmptyBorder(8, 16, 8, 16));
+        jPanelResultadosUsuario.setMaximumSize(null);
+        jPanelResultadosUsuario.setLayout(new java.awt.GridLayout(14, 2, 16, 4));
+
+        jLabelNumeroDocumento1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelNumeroDocumento1.setLabelFor(jLabelNumeroDocumento);
+        jLabelNumeroDocumento1.setText("Número de documento:");
+        jPanelResultadosUsuario.add(jLabelNumeroDocumento1);
+
+        jTextFieldNumeroDocumento1.setEnabled(false);
+        jPanelResultadosUsuario.add(jTextFieldNumeroDocumento1);
+
+        jLabelEmail1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelEmail1.setLabelFor(jLabelEmail);
+        jLabelEmail1.setText("Email:");
+        jPanelResultadosUsuario.add(jLabelEmail1);
+
+        jTextFieldEmail1.setEnabled(false);
+        jPanelResultadosUsuario.add(jTextFieldEmail1);
+
+        jLabelPrimerNombre1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelPrimerNombre1.setLabelFor(jLabelPrimerNombre);
+        jLabelPrimerNombre1.setText("Primer nombre:");
+        jPanelResultadosUsuario.add(jLabelPrimerNombre1);
+
+        jTextFieldPrimerNombre1.setEnabled(false);
+        jPanelResultadosUsuario.add(jTextFieldPrimerNombre1);
+
+        jLabelSegundoNombre1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelSegundoNombre1.setLabelFor(jLabelSegundoNombre);
+        jLabelSegundoNombre1.setText("Segundo nombre:");
+        jPanelResultadosUsuario.add(jLabelSegundoNombre1);
+
+        jTextFieldSegundoNombre1.setEnabled(false);
+        jPanelResultadosUsuario.add(jTextFieldSegundoNombre1);
+
+        jLabelPrimerApellido1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelPrimerApellido1.setLabelFor(jLabelPrimerApellido);
+        jLabelPrimerApellido1.setText("Primer apellido:");
+        jPanelResultadosUsuario.add(jLabelPrimerApellido1);
+
+        jTextFieldPrimerApellido1.setEnabled(false);
+        jPanelResultadosUsuario.add(jTextFieldPrimerApellido1);
+
+        jLabelSegundoApellido1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelSegundoApellido1.setLabelFor(jLabelSegundoApellido);
+        jLabelSegundoApellido1.setText("Segundo apellido:");
+        jPanelResultadosUsuario.add(jLabelSegundoApellido1);
+
+        jTextFieldSegundoApellido1.setEnabled(false);
+        jPanelResultadosUsuario.add(jTextFieldSegundoApellido1);
+
+        jLabelTelefono1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelTelefono1.setLabelFor(jLabelTelefono);
+        jLabelTelefono1.setText("Teléfono:");
+        jPanelResultadosUsuario.add(jLabelTelefono1);
+
+        jTextFieldTelefono1.setEnabled(false);
+        jPanelResultadosUsuario.add(jTextFieldTelefono1);
+
+        jLabelPais1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelPais1.setLabelFor(jLabelPais);
+        jLabelPais1.setText("País:");
+        jPanelResultadosUsuario.add(jLabelPais1);
+
+        jTextFieldPais1.setEnabled(false);
+        jPanelResultadosUsuario.add(jTextFieldPais1);
+
+        jLabelDepartamento1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelDepartamento1.setLabelFor(jLabelDepartamento);
+        jLabelDepartamento1.setText("Departamento");
+        jPanelResultadosUsuario.add(jLabelDepartamento1);
+
+        jTextFieldDepartamento1.setEnabled(false);
+        jPanelResultadosUsuario.add(jTextFieldDepartamento1);
+
+        jLabelCiudad1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelCiudad1.setLabelFor(jLabelCiudad);
+        jLabelCiudad1.setText("Ciudad");
+        jPanelResultadosUsuario.add(jLabelCiudad1);
+
+        jTextFieldCiudad1.setEnabled(false);
+        jPanelResultadosUsuario.add(jTextFieldCiudad1);
+
+        jLabelDireccionPrimeraLinea1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelDireccionPrimeraLinea1.setLabelFor(jLabelDireccionPrimeraLinea);
+        jLabelDireccionPrimeraLinea1.setText("Dirección (primera línea):");
+        jPanelResultadosUsuario.add(jLabelDireccionPrimeraLinea1);
+
+        jTextFieldDireccionPrimeraLinea1.setEnabled(false);
+        jPanelResultadosUsuario.add(jTextFieldDireccionPrimeraLinea1);
+
+        jLabelDireccionSegundaLinea1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelDireccionSegundaLinea1.setLabelFor(jLabelDireccionSegundaLinea);
+        jLabelDireccionSegundaLinea1.setText("Dirección (segunda línea):");
+        jPanelResultadosUsuario.add(jLabelDireccionSegundaLinea1);
+
+        jTextFieldDireccionSegundaLinea1.setEnabled(false);
+        jPanelResultadosUsuario.add(jTextFieldDireccionSegundaLinea1);
+
+        jLabelCodigoZIP1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelCodigoZIP1.setLabelFor(jLabelCodigoZIP);
+        jLabelCodigoZIP1.setText("Código de área (ZIP):");
+        jPanelResultadosUsuario.add(jLabelCodigoZIP1);
+
+        jTextFieldCodigoZIP1.setEnabled(false);
+        jPanelResultadosUsuario.add(jTextFieldCodigoZIP1);
+
+        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
+        jPanel13.setLayout(jPanel13Layout);
+        jPanel13Layout.setHorizontalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 166, Short.MAX_VALUE)
+        );
+        jPanel13Layout.setVerticalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 23, Short.MAX_VALUE)
+        );
+
+        jPanelResultadosUsuario.add(jPanel13);
+
+        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
+        jPanel14.setLayout(jPanel14Layout);
+        jPanel14Layout.setHorizontalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 166, Short.MAX_VALUE)
+        );
+        jPanel14Layout.setVerticalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 23, Short.MAX_VALUE)
+        );
+
+        jPanelResultadosUsuario.add(jPanel14);
+
+        jPanel11.add(jPanelResultadosUsuario);
+
+        jPanel12.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 16, 16));
+
+        jLabelConsultar.setLabelFor(jTextFieldIDConsultar);
+        jLabelConsultar.setText("ID de usuario a consultar:");
+        jPanel12.add(jLabelConsultar);
+
+        jTextFieldIDConsultar.setPreferredSize(new java.awt.Dimension(100, 23));
+        jPanel12.add(jTextFieldIDConsultar);
+
+        jPanel11.add(jPanel12);
+
+        jButtonConsultarUsuario.setText("Consultar Usuario");
+        jButtonConsultarUsuario.setAlignmentX(0.5F);
+        jButtonConsultarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonConsultarUsuarioActionPerformed(evt);
+            }
+        });
+        jPanel11.add(jButtonConsultarUsuario);
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        jPanel8.add(jPanel11, gridBagConstraints);
+
+        jTabbedPane2.addTab("Consultar usuario individual", jPanel8);
+
+        jPanel10.setLayout(new java.awt.GridBagLayout());
+
         jPanel2.setMaximumSize(null);
-        jPanel2.setMinimumSize(null);
+        jPanel2.setName(""); // NOI18N
+        jPanel2.setPreferredSize(new java.awt.Dimension(752, 476));
+        jPanel2.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 0, 0));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 565, Short.MAX_VALUE)
-        );
+        jPanel15.setMinimumSize(new java.awt.Dimension(752, 476));
+        jPanel15.setPreferredSize(new java.awt.Dimension(752, 476));
+        jPanel15.setLayout(new javax.swing.BoxLayout(jPanel15, javax.swing.BoxLayout.LINE_AXIS));
 
-        jTabbedPane1.addTab("Leer", jPanel2);
+        jPanel16.setAlignmentX(0.5F);
+        jPanel16.setMinimumSize(new java.awt.Dimension(752, 436));
+        jPanel16.setPreferredSize(new java.awt.Dimension(752, 436));
+        jPanel16.setLayout(new javax.swing.BoxLayout(jPanel16, javax.swing.BoxLayout.PAGE_AXIS));
+
+        jPanel17.setMinimumSize(new java.awt.Dimension(752, 436));
+        jPanel17.setName(""); // NOI18N
+        jPanel17.setPreferredSize(new java.awt.Dimension(752, 416));
+        jPanel17.setRequestFocusEnabled(false);
+        jPanel17.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 0, 0));
+
+        jScrollPane1.setMinimumSize(new java.awt.Dimension(752, 400));
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(752, 400));
+
+        jTableUsuarios.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Número de Documento", "Email", "Primer Nombre", "Segundo Nombre", "Primer Apellido", "Segundo Apellido", "Número de Teléfono", "País", "Departamento", "Ciudad", "Dirección (Línea 1)", "Dirección (Línea 2)", "Código ZIP"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Long.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(jTableUsuarios);
+
+        jPanel17.add(jScrollPane1);
+
+        jPanel16.add(jPanel17);
+
+        jPanel18.setPreferredSize(new java.awt.Dimension(752, 93));
+        jPanel18.setLayout(new java.awt.GridBagLayout());
+
+        jButtonCargarUsuarios.setText("Cargar o refrescar usuarios");
+        jButtonCargarUsuarios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCargarUsuariosActionPerformed(evt);
+            }
+        });
+        jPanel18.add(jButtonCargarUsuarios, new java.awt.GridBagConstraints());
+
+        jPanel16.add(jPanel18);
+
+        jPanel15.add(jPanel16);
+
+        jPanel2.add(jPanel15);
+
+        jPanel10.add(jPanel2, new java.awt.GridBagConstraints());
+
+        jTabbedPane2.addTab("Ver todos los usuarios", jPanel10);
+
+        jTabbedPane1.addTab("Leer", jTabbedPane2);
 
         jPanel3.setMaximumSize(null);
         jPanel3.setMinimumSize(null);
@@ -243,11 +511,11 @@ public class PanelRaiz extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+            .addGap(0, 810, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 565, Short.MAX_VALUE)
+            .addGap(0, 575, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Actualizar", jPanel3);
@@ -384,17 +652,125 @@ public class PanelRaiz extends javax.swing.JFrame {
             
             return;
         }
-        
+
+        // Registro no eliminado. Posiblemente el registro no existía.        
+        if (filasEliminadas == 0) {
+
+            System.getLogger(PanelRaiz.class.getName()).log(System.Logger.Level.ERROR, "Error eliminando usuario");
+            JOptionPane.showMessageDialog(this, "No se pudo eliminar el usuario con el ID especificado.\nAsegurese de que existe un usuario con el ID: " + id, "Error de eliminación", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
         // Registro eliminado exitosamente. Se le informa al usuario.
-        if (filasEliminadas > 0) {
-            JOptionPane.showMessageDialog(this, "Usuario eliminado exitosamente", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(this, "Usuario eliminado exitosamente", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_jButtonEliminarUsuarioActionPerformed
+
+    /**
+     * Consulta un usuario de la base de datos por su ID, y muestra sus datos en pantalla.
+     * 
+     * @param evt Evento AWT generado.
+     */
+    private void jButtonConsultarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultarUsuarioActionPerformed
+        // Primero se oculta el JPanel de resultados. Será mostrado condicionalmente luego.
+        this.jPanelResultadosUsuario.setVisible(false);
+        
+        // Se obtiene el ID ingresado.
+        final String idString = this.jTextFieldIDConsultar.getText();
+        final long id;
+        
+        // Se intenta convertir a número entero.
+        try {
+            id = Long.parseLong(idString);
+        } catch (NumberFormatException ex) {
+            // Se muestra mensaje de error en caso de haber ocurrido un error.
+            System.getLogger(PanelRaiz.class.getName()).log(System.Logger.Level.ERROR, "Error de formato", ex);
+            JOptionPane.showMessageDialog(this, "La ID ingresada debe ser un numero entero:\n\n" + ex.getMessage(), "Error de formato", JOptionPane.ERROR_MESSAGE);
+            
             return;
         }
         
-        // Registro no eliminado. Posiblemente el registro no existía.
-        System.getLogger(PanelRaiz.class.getName()).log(System.Logger.Level.ERROR, "Error eliminando usuario");
-        JOptionPane.showMessageDialog(this, "No pudo el usuario con el ID especificado.\nAsegurese de que existe un usuario con el ID: " + id, "Error de eliminación", JOptionPane.ERROR_MESSAGE);
-    }//GEN-LAST:event_jButtonEliminarUsuarioActionPerformed
+        // Se intenta consultar el registro.
+        final Usuario usuario;
+        
+        try {   
+            usuario = ControladorUsuario.leerUsuario(id);
+        } catch (SQLException ex) {
+            // Error SQL. Se muestra información de la excepción al usuario.
+            System.getLogger(PanelRaiz.class.getName()).log(System.Logger.Level.ERROR, "Error consultando usuario", ex);
+            JOptionPane.showMessageDialog(this, "Error consultando usuario:\n\n" + ex.getMessage(), "Error SQL", JOptionPane.ERROR_MESSAGE);
+            
+            return;
+        }
+        
+        // Se muestra un error si no se pudo obtener un usuario.
+        if (usuario == null) {
+            System.getLogger(PanelRaiz.class.getName()).log(System.Logger.Level.ERROR, "Error obteniendo usuario");
+            JOptionPane.showMessageDialog(this, "No se pudo obtener el usuario con el ID especificado.\nAsegurese de que existe un usuario con el ID: " + id, "Error de consulta", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        
+        // Se muestra el usuario obtenido.
+        this.jTextFieldNumeroDocumento1.setText(usuario.getNumeroDocumento());
+        this.jTextFieldEmail1.setText(usuario.getEmail());
+        this.jTextFieldPrimerNombre1.setText(usuario.getPrimerNombre());
+        this.jTextFieldSegundoNombre1.setText(usuario.getSegundoNombre());
+        this.jTextFieldPrimerApellido1.setText(usuario.getPrimerApellido());
+        this.jTextFieldSegundoApellido1.setText(usuario.getSegundoApellido());
+        this.jTextFieldTelefono1.setText(usuario.getNumeroTelefono());
+        this.jTextFieldPais1.setText(usuario.getPais());
+        this.jTextFieldDepartamento1.setText(usuario.getDepartamento());
+        this.jTextFieldCiudad1.setText(usuario.getCiudad());
+        this.jTextFieldDireccionPrimeraLinea1.setText(usuario.getDireccionLinea1());
+        this.jTextFieldDireccionSegundaLinea1.setText(usuario.getDireccionLinea2());
+        this.jTextFieldCodigoZIP1.setText(usuario.getCodigoZIP());
+        
+        this.jPanelResultadosUsuario.setVisible(true);
+        JOptionPane.showMessageDialog(this, "Usuario obtenido exitosamente", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_jButtonConsultarUsuarioActionPerformed
+
+    /**
+     * Carga todos los registros usuario de la base de datos y los muestra en la tabla.
+     * Cada invocación de este método vacía la table y la vuelve a llenar.
+     * 
+     * @param evt Evento AWT generado.
+     */
+    private void jButtonCargarUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCargarUsuariosActionPerformed
+        // Se intenta obtener todos los usuariso de la base de datos.
+        final List<Usuario> usuarios;
+        
+        try {
+            usuarios = ControladorUsuario.leerUsuarios();
+        } catch (SQLException ex) {
+            // Error SQL. Se muestra información de la excepción al usuario.
+            System.getLogger(PanelRaiz.class.getName()).log(System.Logger.Level.ERROR, "Error consultando usuarios", ex);
+            JOptionPane.showMessageDialog(this, "Error consultando usuarios:\n\n" + ex.getMessage(), "Error SQL", JOptionPane.ERROR_MESSAGE);
+
+            return;
+        }
+        
+        // Se reemplaza todo dato existente en la tabla por datos obtenidos de los usuarios en la base de datos.
+        final DefaultTableModel modeloTabla = (DefaultTableModel) this.jTableUsuarios.getModel();
+        modeloTabla.setRowCount(0);
+        
+        for (Usuario usuario: usuarios) {
+            modeloTabla.addRow(new Object[] {
+                usuario.getId(),
+                usuario.getNumeroDocumento(),
+                usuario.getEmail(),
+                usuario.getPrimerNombre(),
+                usuario.getSegundoNombre(),
+                usuario.getPrimerApellido(),
+                usuario.getSegundoApellido(),
+                usuario.getNumeroTelefono(),
+                usuario.getPais(),
+                usuario.getDepartamento(),
+                usuario.getCiudad(),
+                usuario.getDireccionLinea1(),
+                usuario.getDireccionLinea2(),
+                usuario.getCodigoZIP()
+            });
+        }
+    }//GEN-LAST:event_jButtonCargarUsuariosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -427,45 +803,89 @@ public class PanelRaiz extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonBorrarTodo;
+    private javax.swing.JButton jButtonCargarUsuarios;
+    private javax.swing.JButton jButtonConsultarUsuario;
     private javax.swing.JButton jButtonCrearUsuario;
     private javax.swing.JButton jButtonEliminarUsuario;
     private javax.swing.JLabel jLabelCiudad;
+    private javax.swing.JLabel jLabelCiudad1;
     private javax.swing.JLabel jLabelCodigoZIP;
+    private javax.swing.JLabel jLabelCodigoZIP1;
+    private javax.swing.JLabel jLabelConsultar;
     private javax.swing.JLabel jLabelDepartamento;
+    private javax.swing.JLabel jLabelDepartamento1;
     private javax.swing.JLabel jLabelDireccionPrimeraLinea;
+    private javax.swing.JLabel jLabelDireccionPrimeraLinea1;
     private javax.swing.JLabel jLabelDireccionSegundaLinea;
+    private javax.swing.JLabel jLabelDireccionSegundaLinea1;
     private javax.swing.JLabel jLabelEliminar;
     private javax.swing.JLabel jLabelEmail;
+    private javax.swing.JLabel jLabelEmail1;
     private javax.swing.JLabel jLabelNumeroDocumento;
+    private javax.swing.JLabel jLabelNumeroDocumento1;
     private javax.swing.JLabel jLabelPais;
+    private javax.swing.JLabel jLabelPais1;
     private javax.swing.JLabel jLabelPrimerApellido;
+    private javax.swing.JLabel jLabelPrimerApellido1;
     private javax.swing.JLabel jLabelPrimerNombre;
+    private javax.swing.JLabel jLabelPrimerNombre1;
     private javax.swing.JLabel jLabelSegundoApellido;
+    private javax.swing.JLabel jLabelSegundoApellido1;
     private javax.swing.JLabel jLabelSegundoNombre;
+    private javax.swing.JLabel jLabelSegundoNombre1;
     private javax.swing.JLabel jLabelTelefono;
+    private javax.swing.JLabel jLabelTelefono1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel17;
+    private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JPanel jPanelResultadosUsuario;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JTable jTableUsuarios;
     private javax.swing.JTextField jTextFieldCiudad;
+    private javax.swing.JTextField jTextFieldCiudad1;
     private javax.swing.JTextField jTextFieldCodigoZIP;
+    private javax.swing.JTextField jTextFieldCodigoZIP1;
     private javax.swing.JTextField jTextFieldDepartamento;
+    private javax.swing.JTextField jTextFieldDepartamento1;
     private javax.swing.JTextField jTextFieldDireccionPrimeraLinea;
+    private javax.swing.JTextField jTextFieldDireccionPrimeraLinea1;
     private javax.swing.JTextField jTextFieldDireccionSegundaLinea;
+    private javax.swing.JTextField jTextFieldDireccionSegundaLinea1;
     private javax.swing.JTextField jTextFieldEmail;
+    private javax.swing.JTextField jTextFieldEmail1;
+    private javax.swing.JTextField jTextFieldIDConsultar;
     private javax.swing.JTextField jTextFieldIDEliminar;
     private javax.swing.JTextField jTextFieldNumeroDocumento;
+    private javax.swing.JTextField jTextFieldNumeroDocumento1;
     private javax.swing.JTextField jTextFieldPais;
+    private javax.swing.JTextField jTextFieldPais1;
     private javax.swing.JTextField jTextFieldPrimerApellido;
+    private javax.swing.JTextField jTextFieldPrimerApellido1;
     private javax.swing.JTextField jTextFieldPrimerNombre;
+    private javax.swing.JTextField jTextFieldPrimerNombre1;
     private javax.swing.JTextField jTextFieldSegundoApellido;
+    private javax.swing.JTextField jTextFieldSegundoApellido1;
     private javax.swing.JTextField jTextFieldSegundoNombre;
+    private javax.swing.JTextField jTextFieldSegundoNombre1;
     private javax.swing.JTextField jTextFieldTelefono;
+    private javax.swing.JTextField jTextFieldTelefono1;
     // End of variables declaration//GEN-END:variables
 
     private final javax.swing.JTextField[] PESTANA_CREAR_CAMPOS_DE_ENTRADA;
